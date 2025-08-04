@@ -15,19 +15,20 @@ repositories {
 }
 
 dependencies {
-    // Spring Boot Starter
+    // Spring Boot Starters
     implementation("org.springframework.boot:spring-boot-starter-web")
-
-    // JPA
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    runtimeOnly("com.h2database:h2") // 개발용 DB
+    implementation("org.springframework.boot:spring-boot-starter-validation")
 
-    // Kotlin
+    // Kotlin 기본
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-    // Validation
-    implementation("org.springframework.boot:spring-boot-starter-validation")
+    // Swagger (Springdoc OpenAPI)
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0")
+
+    // H2 (개발용 DB)
+    runtimeOnly("com.h2database:h2")
 
     // Test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
